@@ -1,3 +1,11 @@
+branches:
+  only:
+  - master
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
 deploy:
   provider: pages
   skip_cleanup: true
